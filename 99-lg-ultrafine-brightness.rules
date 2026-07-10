@@ -1,0 +1,5 @@
+# Grants a normal user permission to control brightness on the LG UltraFine
+# 24MD4KL without needing sudo. Install with:
+#   sudo cp 99-lg-ultrafine-brightness.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+SUBSYSTEM=="usb", ATTRS{idVendor}=="043e", ATTRS{idProduct}=="9a63", MODE="0666"
